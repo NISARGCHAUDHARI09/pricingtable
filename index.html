@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Pricing</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient bg-gray-100 text-gray-800 transition duration-500 ease-in-out">
+
+    <div class="container mx-auto p-6 fade-in">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold">API Pricing</h1>
+            <button id="theme-toggle"
+                class="bg-gray-200 p-3 rounded-full shadow-lg focus:outline-none focus:ring transition duration-500 ease-in-out hover:bg-gray-300">
+                Toggle Dark Mode
+            </button>
+        </div>
+        <p class="mt-4 text-lg">Our API pricing is based on the model used and the number of tokens processed. Here's a breakdown of the costs:</p>
+
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            <div class="pricing-card">
+                <h3 class="text-2xl font-semibold">OpenAI</h3>
+                <p class="text-lg mt-2">Model: GPT-3.5</p>
+                <p class="text-4xl font-bold mt-4">$0.002</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">per 1k tokens</p>
+            </div>
+            <div class="pricing-card">
+                <h3 class="text-2xl font-semibold">OpenAI</h3>
+                <p class="text-lg mt-2">Model: GPT-4</p>
+                <p class="text-4xl font-bold mt-4">$0.03</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">per 1k tokens</p>
+            </div>
+            <div class="pricing-card">
+                <h3 class="text-2xl font-semibold">Together AI</h3>
+                <p class="text-lg mt-2">Model: Llama-2-70b</p>
+                <p class="text-4xl font-bold mt-4">$0.0008</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">per 1k tokens</p>
+            </div>
+            <div class="pricing-card">
+                <h3 class="text-2xl font-semibold">Together AI</h3>
+                <p class="text-lg mt-2">Model: Llama-2-13b</p>
+                <p class="text-4xl font-bold mt-4">$0.0006</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">per 1k tokens</p>
+            </div>
+        </div>
+
+        <!-- Additional Information Sections -->
+        <div class="mt-8 slide-in-bottom">
+            <h2 class="text-xl font-semibold">Token Estimation</h2>
+            <p class="mt-2 text-lg">On average, 1 token is approximately 4 characters or 0.75 words. For precise pricing, we recommend using our token calculator tool.</p>
+        </div>
+
+        <div class="mt-8 slide-in-bottom">
+            <h2 class="text-xl font-semibold">Billing</h2>
+            <p class="mt-2 text-lg">You will only be charged for the tokens used in generating the book. The API tracks token usage and bills accordingly. Detailed usage reports are available in your account dashboard.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

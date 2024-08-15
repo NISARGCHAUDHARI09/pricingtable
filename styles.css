@@ -1,0 +1,86 @@
+/* Custom CSS for animations and additional styles */
+body.dark {
+    background-color: #1a202c;
+    color: #cbd5e0;
+}
+
+/* Background gradient with animation */
+body.bg-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Pricing Card Style */
+.pricing-card {
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in from bottom */
+.slide-in-bottom {
+    animation: slideInBottom 1s ease-in-out forwards;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+@keyframes slideInBottom {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Light/Dark mode button toggle effect */
+#theme-toggle {
+    transition: transform 0.3s ease-in-out;
+    color: black; /* Ensures the text is black in both modes */
+}
+
+#theme-toggle:active {
+    transform: scale(0.9);
+}
+
+/* Tailwind Dark Mode Styles */
+body.dark .pricing-card {
+    background: linear-gradient(135deg, #23a6d5, #23d5ab);
+    color: #000000;
+}
+
+body.dark #theme-toggle {
+    color: black; /* Ensures the text is black in dark mode */
+}
